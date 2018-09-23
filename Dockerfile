@@ -10,6 +10,12 @@ LABEL maintainer="Paulus Schoutsen <Paulus@PaulusSchoutsen.nl>"
 ARG BUILD_DATE
 ARG VCS_REF
 
+# Good docker practice, plus we get microbadger badges
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-url="https://github.com/funkypenguin/home-assistant.git" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.schema-version="2.2-r1"
+
 # Uncomment any of the following lines to disable the installation.
 #ENV INSTALL_TELLSTICK no
 #ENV INSTALL_OPENALPR no
